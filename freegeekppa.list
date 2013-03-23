@@ -1,0 +1,4 @@
+# debian sources for freegeek specific packages in LP PPA
+# install into /etc/apt/sources.list.d
+
+deb http://ppa.launchpad.net/freegeekpdx/RELEASE/ubuntu RELEASE main 
