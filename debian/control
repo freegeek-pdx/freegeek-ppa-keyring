@@ -9,6 +9,7 @@ Standards-Version: 3.9.2
 Package: freegeek-ppa-keyring
 Architecture: all
 Priority: important
+Conflicts: libc6 (< 2.15-0ubuntu10.2)
 Depends: ${misc:Depends}, gnupg (>= 1.0.6-4), apt
 Description: GnuPG ppa keys of the Freegeek ppa
  The Freegeek digitally signs its Release files. This package
