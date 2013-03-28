@@ -1,0 +1,2 @@
+keyrings/freegeek-ppa-keyring.gpg usr/share/keyrings/
+udeb/05freegeek-ppa-keyring-di usr/lib/post-base-installer.d/

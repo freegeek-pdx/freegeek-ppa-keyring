@@ -1,0 +1,21 @@
+Source: freegeek-ppa-keyring
+Section: public/misc
+Maintainer: Freegeek Technocrats <admin+packages@freegeek.org>
+Uploaders: Vagrant Cascadian <vagrant@freegeek.org>, Ryan Niebur <RyanRyan52@gmail.com>, Vagrant Cascadian <vagrant@debian.org>
+Build-Depends: debhelper (>= 7)
+Priority: optional
+Standards-Version: 3.9.2
+
+Package: freegeek-ppa-keyring
+Architecture: all
+Priority: important
+Depends: ${misc:Depends}, gnupg (>= 1.0.6-4), apt
+Description: GnuPG ppa keys of the Freegeek ppa
+ The Freegeek digitally signs its Release files. This package
+ contains the ppa keys used for that.
+
+Package: freegeek-ppa-keyring-di
+Section: debian-installer
+Architecture: all
+Description: GnuPG ppa keys of the Freegeek ppa
+XC-Package-Type: udeb

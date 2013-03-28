@@ -1,0 +1,34 @@
+#!/bin/sh
+
+set -e
+
+if [ "$1" = "configure" ]; then
+    # configure sources.list based on release
+    # map releases to current LTS release
+    case "$(lsb_release --codename --short)" in
+        precise|quantal|raring|*) RELEASE="precise" ;;
+    esac
+
+    release_apt_list="/etc/freegeek-ppa/apt/$RELEASE.list"
+    freegeek_apt_list="/etc/apt/sources.list.d/freegeekppa.list"
+    if [ -f "$release_apt_list" ]; then
+        if [ -L "$freegeek_apt_list" ]; then
+            if [ "$(readlink $freegeek_apt_list)" = "$release_apt_list" ]; then
+                rm $freegeek_apt_list
+            else
+                mv "$freegeek_apt_list" "$(dirname $freegeek_apt_list)/oldfreegeekppa.list"
+            fi
+        elif [ -e "$freegeek_apt_list" ]; then
+            mv "$freegeek_apt_list" "$(dirname $freegeek_apt_list)/oldfreegeekppa.list"
+        fi
+        ln -s $release_apt_list $freegeek_apt_list
+    else
+        echo "WARNING: no $release_apt_list for $RELEASE"
+    fi
+fi
+
+if which apt-key > /dev/null; then
+    apt-key add /usr/share/keyrings/freegeek-ppa-keyring.gpg
+fi
+
+#DEBHELPER#
