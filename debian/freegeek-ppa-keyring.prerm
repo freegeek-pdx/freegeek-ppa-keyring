@@ -1,0 +1,6 @@
+#!/bin/sh
+
+set -e
+
+freegeek_apt_list="/etc/apt/sources.list.d/freegeekppa.list"
+rm -f "$freegeek_apt_list"
