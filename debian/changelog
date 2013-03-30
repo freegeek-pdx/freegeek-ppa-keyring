@@ -1,5 +1,5 @@
-freegeek-ppa-keyring (2013.03.22.0) UNRELEASED; urgency=low
+freegeek-ppa-keyring (2013.03.22.0) unstable; urgency=low
 
   * Package for FG PPA
 
- -- Ryan Niebur <ryan@debian.org>  Fri, 22 Mar 2013 17:27:42 -0700
+ -- Ryan Niebur <ryan@debian.org>  Sat, 30 Mar 2013 10:19:27 -0700

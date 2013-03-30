@@ -1,5 +1,5 @@
 Source: freegeek-ppa-keyring
-Section: public/misc
+Section: ubuntu/misc
 Maintainer: Freegeek Technocrats <admin+packages@freegeek.org>
 Uploaders: Vagrant Cascadian <vagrant@freegeek.org>, Ryan Niebur <RyanRyan52@gmail.com>, Vagrant Cascadian <vagrant@debian.org>
 Build-Depends: debhelper (>= 7)
