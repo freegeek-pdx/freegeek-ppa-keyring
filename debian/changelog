@@ -1,3 +1,10 @@
+freegeek-ppa-keyring (2013.03.22.1) precise; urgency=low
+
+  * Upload to freegeekpdx precise ppa on launchpad.net. 
+  * debian/control: Update Section and Uploaders.
+
+ -- Vagrant Cascadian <vagrant@freegeek.org>  Tue, 17 Dec 2013 14:26:41 -0800
+
 freegeek-ppa-keyring (2013.03.22.0) unstable; urgency=low
 
   * Package for FG PPA
